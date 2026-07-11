@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Quality Anomaly Report</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Quality Anomaly Report</h1>
+
+    <form action="/save"
+          method="POST"
+          enctype="multipart/form-data">
+
+        <label>Model</label>
+        <input
+            type="text"
+            name="model"
+            id="model"
+            required>
+
+        <label>Line</label>
+        <input
+            type="text"
+            name="line"
+            id="line"
+            required>
+
+        <label>Process</label>
+        <input
+            type="text"
+            name="process"
+            id="process"
+            required>
+
+        <label>Date</label>
+        <input
+            type="date"
+            name="date"
+            id="date"
+            required>
+
+        <label>Qty Defect</label>
+        <input
+            type="text"
+            name="qty_defect"
+            id="qty_defect"
+            placeholder="Ex: 7/137"
+            required>
+
+        <label>Anomaly Category</label>
+        <input
+            type="text"
+            name="category"
+            id="category"
+            placeholder="Ex: FAIL RATE"
+            required>
+
+        <label>Defect Symptom</label>
+        <textarea
+            name="defect"
+            id="defect"
+            rows="4"
+            required></textarea>
+
+        <label>Possible Cause</label>
+        <textarea
+            name="cause"
+            id="cause"
+            rows="5"
+            required></textarea>
+
+        <label>Action</label>
+        <textarea
+            name="action"
+            id="action"
+            rows="6"
+            required></textarea>
+
+        <br>
+
+        <!-- BOTÃO IA -->
+
+        <button
+            type="button"
+            id="aiButton"
+            style="background:#28a745; margin-bottom:20px;">
+
+            🤖 Analisar com IA
+
+        </button>
+
+        <br>
+
+        <label>PIC [Dept]</label>
+
+        <input
+            type="text"
+            name="pic"
+            id="pic"
+            required>
+
+        <label>Photo</label>
+
+        <input
+            type="file"
+            name="photo"
+            accept="image/*">
+
+        <br><br>
+
+        <!-- PowerPoint Português -->
+
+        <button
+            type="submit"
+            style="background:#005baa; margin-bottom:10px;">
+
+            📥 Exportar PowerPoint (PT)
+
+        </button>
+
+        <br>
+
+        <!-- PowerPoint Inglês -->
+
+        <button
+            type="submit"
+            formaction="/export_en"
+            formmethod="POST"
+            style="background:#28a745;">
+
+            🌎 Exportar PowerPoint (EN)
+
+        </button>
+
+    </form>
+
+    <br>
+
+    <button
+        type="button"
+        onclick="window.location.href='/'">
+
+        Voltar
+
+    </button>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

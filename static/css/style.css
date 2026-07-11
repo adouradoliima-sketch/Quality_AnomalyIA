@@ -1,0 +1,73 @@
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:#f2f4f7;
+
+    margin:40px;
+
+}
+
+.container{
+
+    width:700px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    box-shadow:0px 0px 15px rgba(0,0,0,.15);
+
+}
+
+h1{
+
+    color:#005baa;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:10px;
+
+    font-size:16px;
+
+}
+
+textarea{
+
+    width:100%;
+
+    padding:10px;
+
+    font-size:16px;
+
+}
+
+button{
+
+    padding:12px 25px;
+
+    background:#005baa;
+
+    color:white;
+
+    border:none;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+}
+
+button:hover{
+
+    background:#003f7f;
+
+}
