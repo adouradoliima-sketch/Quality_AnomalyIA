@@ -6,7 +6,7 @@ import json
 # ==========================================
 
 client = genai.Client(
-    api_key="AQ.Ab8RN6Jvffd5wiF7S31RkOjWp9zj-FFj9wNZYnYsce6MNN7oGw"
+    api_key="AQ.Ab8RN6Jj1vqyisGxIKFCuHyNMG3047j0WWdAF2DUa01s3h4uYQ"
 )
 
 # ==========================================
