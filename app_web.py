@@ -166,12 +166,6 @@ def export_en():
         image_path=image_path
     )
 
-    reports_folder = os.path.join(os.getcwd(), "reports")
-
-    ppt_file = os.path.join(
-        reports_folder,
-        os.path.basename(ppt_file)
-    )
 
     return send_file(
         ppt_file,
